@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Loan Calculator</title>
+</head>
+<body class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body text-center mt-5 bg-success">
+                    <h1 class="heading display-5 pb-3 bg-primary">Loan Calculator</h1>
+                    <form id="loan-form">
+                        <!--Enter Loan Amount-->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                            </div>
+                        </div>
+                        <!--Enter Interestt-->
+                        <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">%</span>
+                                    <input type="number" class="form-control" id="interest" placeholder="Interest">
+                                </div>
+                            </div>
+                        <!--Enter Years To Repay-->
+                        <div class="form-group">
+                                <div class="input-group">
+                                    <input type="number" class="form-control" id="years" placeholder="Years to repay">
+                                </div>
+                        </div>
+                        <!--BUTTON SUBMT-->
+                        <div class="form-grup">
+                            <input type="submit" id="btn-calculate" class="btn btn-dark btn-block bg-danger" value="Calculate">
+                        </div>
+                    </form>
+                    <!--Loading Effect-->
+                    <div class="loading" id="loader">
+                        <img src="img/loader2.gif" alt="">
+                    </div>
+                    <!--RESULTS-->
+                    <div id="results">
+                        <br>
+                        <h5>Results</h5>
+                        <!--MONTHLY PAYMENT-->
+                        <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Monthly Payment</span>
+                                    <input type="number" class="form-control" id="monthly-payment" disabled>
+                                </div>
+                            </div>
+                        <!--TOTAL PAYMENT-->
+                        <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Total Payment</span>
+                                    <input type="number" class="form-control" id="total-payment" disabled>
+                                </div>
+                            </div>
+                        <!--TOTAL INTEREST-->
+                        <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Total Interest</span>
+                                    <input type="number" class="form-control" id="total-interest" disabled>
+                                </div>
+                            </div>
+                        <!--RESET BTN-->
+                            <div class="form-grup">
+                                    <input type="submit" id="btn-reset" class="btn btn-dark btn-block bg-warning" value="Reset">
+                                </div>
+                    </div>
+                </div>
+            </div><mx-auto></mx-auto>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
